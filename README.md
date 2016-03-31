@@ -30,12 +30,8 @@ See the official documentation
 The image-picker plugin creates a new object called *navigator.imagePicker*, but the object is
 available when the *deviceready* event is handled.
 
-We don't provide a *image_picker* variable in this plugin (as said in the official
-documentation on js_of_ocaml). If we did, *image_picker* will be set to **undefined**
-because the *navigator.imagePicker* object doesn't exist when we create the variable.
-
 We provide a function Image_picker.t of type unit -> image_picker which does returns the
-*navigator.imagePicker* object. You need to call it when the deviceready event is handled, eg
+*navigator.imagePicker* object. You need to call it when the deviceready event is handled, eg (with js_of_ocaml)
 
 ```OCaml
 let on_device_ready _ =
