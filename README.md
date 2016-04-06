@@ -1,5 +1,7 @@
 # ocaml-cordova-plugin-image-picker
 
+* gen_js_api (master branch): [![Build Status](https://travis-ci.org/dannywillems/ocaml-cordova-plugin-image-picker.svg?branch=master)](https://travis-ci.org/dannywillems/ocaml-cordova-plugin-image-picker)
+
 Binding to
 [cordova-plugin-image-picker](https://github.com/apache/cordova-plugin-image-picker)
 
