@@ -1,5 +1,5 @@
 ################################################################################
-MLI_FILE		= image_picker.mli
+MLI_FILE		= cordova_image_picker.mli
 ## Name which will be used in -package with ocamlfind
 LIB_NAME		= cordova-plugin-image-picker
 ################################################################################
