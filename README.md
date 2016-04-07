@@ -22,6 +22,28 @@ Source: [cordova-plugin-image-picker](https://github.com/apache/cordova-plugin-i
 
 Only gen_js_api is developed.
 
+## How to install and compile your project by using this plugin ?
+
+Don't forget to switch to a compiler **>= 4.03.0**.
+```Shell
+opam switch 4.03.0+beta1
+```
+
+You can use opam by pinning the repository with
+```Shell
+opam pin add cordova-plugin-image-picker https://github.com/dannywillems/ocaml-cordova-plugin-image-picker.git
+```
+
+and to compile your project, use
+```Shell
+ocamlfind ocamlc -c -o [output_file] -package gen_js_api -package cordova-plugin-image-picker [...] -linkpkg [other arguments]
+```
+
+Don't forget to install the cordova plugin activity indicator with
+```Shell
+cordova plugin add cordova-plugin-image-picker
+```
+
 ## How to use ?
 
 See the official documentation
