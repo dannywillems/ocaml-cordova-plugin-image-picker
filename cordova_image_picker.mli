@@ -1,13 +1,5 @@
 (* -------------------------------------------------------------------------- *)
-class options : Ojs.t ->
-  object
-    inherit Ojs.obj
-
-    method maximum_images_count   : int
-    method width                  : int
-    method height                 : int
-    method quality                : int
-  end
+type options = private Ojs.t
 
 val create_options :
   ?maximum_images_count:(int [@js.default 15])    ->
@@ -19,19 +11,11 @@ val create_options :
 (* -------------------------------------------------------------------------- *)
 
 (* -------------------------------------------------------------------------- *)
-class image_picker : Ojs.t ->
-  object
-    inherit Ojs.obj
-
-    method get_pictures :   (string array -> unit)                          ->
-                            (string -> unit)                                ->
-                            ?opt:(options [@js.default create_options ()])  ->
-                            unit                                            ->
-                            unit
-  end
-(* -------------------------------------------------------------------------- *)
-
-(* -------------------------------------------------------------------------- *)
-val t : unit -> image_picker
-[@@js.get "window.imagePicker"]
+val get_pictures :
+  (string array -> unit)                          ->
+  (string -> unit)                                ->
+  ?opt:(options [@js.default create_options ()])  ->
+  unit                                            ->
+  unit
+[@@js.global "window.imagePicker.getPictures"]
 (* -------------------------------------------------------------------------- *)
